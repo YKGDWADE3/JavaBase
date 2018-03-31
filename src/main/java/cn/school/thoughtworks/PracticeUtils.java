@@ -9,20 +9,31 @@ public class PracticeUtils {
 
     public static String getItemFromString(String string){
         if (string != null && !string.isEmpty()) {
+            int index = string.length();
             if (string.contains("-")){
-                int index = string.indexOf("-");
-                return string.subSequence(0, index).toString();
+                index = string.indexOf("-");
+            } else if (string.contains(":")) {
+                index = string.indexOf(":");
+            } else if (string.contains("[")) {
+                index = string.indexOf("[");
             }
-            return string;
+            return string.substring(0, index);
         }
         return null;
     }
 
     public static int getNumberFromString(String string) {
         if (string != null && !string.isEmpty()) {
+            int index;
             if (string.contains("-")){
-                int index = string.indexOf("-");
-                return Integer.parseInt(string.subSequence(index + 1, string.length()).toString());
+                index = string.indexOf("-");
+                return Integer.parseInt(string.substring(index+1, string.length()));
+            } else if (string.contains(":")) {
+                index = string.indexOf(":");
+                return Integer.parseInt(string.substring(index+1, string.length()));
+            } else if (string.contains("[")) {
+                index = string.indexOf("[");
+                return Integer.parseInt(string.substring(index+1, string.length()));
             }
             return 1;
         }

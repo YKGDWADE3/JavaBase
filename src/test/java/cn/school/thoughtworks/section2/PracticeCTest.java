@@ -24,8 +24,8 @@ public class PracticeCTest {
         List<String> collection1 = Arrays.asList(
                 "a", "a", "a",
                 "e", "e", "e", "e", "e", "e", "e",
-                "h", "h", "h", "h", "h", "h", "h[3]", "h", "h",
-                "t", "t-2", "t", "t", "t", "t", "t", "t", "t[10]",
+                "h", "h", "h", "h", "h", "h", "h[3", "h", "h",
+                "t", "t-2", "t", "t", "t", "t", "t", "t", "t[10",
                 "f", "f", "f", "f", "f", "f", "f", "f", "f",
                 "c:8",
                 "g", "g", "g", "g", "g", "g", "g",
