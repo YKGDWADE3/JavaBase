@@ -33,7 +33,8 @@ public class PracticeUtils {
                 return Integer.parseInt(string.substring(index+1, string.length()));
             } else if (string.contains("[")) {
                 index = string.indexOf("[");
-                return Integer.parseInt(string.substring(index+1, string.length()));
+                int end = string.indexOf("]");
+                return Integer.parseInt(string.substring(index+1, end));
             }
             return 1;
         }
